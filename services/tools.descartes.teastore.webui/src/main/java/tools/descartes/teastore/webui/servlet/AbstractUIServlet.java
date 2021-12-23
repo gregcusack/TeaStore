@@ -72,7 +72,7 @@ public abstract class AbstractUIServlet extends HttpServlet {
 	/**
 	 * Text for session blob.
 	 */
-	protected static final String BLOB = "sessionBlob";
+	protected static final String BLOB = "sessionBlob12345";
 	/**
 	 * Text for confirmed order.
 	 */
@@ -163,10 +163,10 @@ public abstract class AbstractUIServlet extends HttpServlet {
 	 */
 	protected void redirect(String target, HttpServletResponse response, String cookiename, String value)
 			throws IOException {
-		if (!cookiename.equals("")) {
-			Cookie cookie = new Cookie(cookiename, value.replace(" ", "_"));
-			response.addCookie(cookie);
-		}
+		//if (!cookiename.equals("")) {
+		//	Cookie cookie = new Cookie(cookiename, value.replace(" ", "_"));
+		//	response.addCookie(cookie);
+		//}
 
 		redirect(target, response);
 	}
